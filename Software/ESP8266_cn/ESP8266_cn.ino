@@ -64,8 +64,9 @@ void setup() {
   FastLED.addLeds<NEOPIXEL, DATA_PIN>(leds, NUM_LEDS);
   fill_solid(leds, NUM_LEDS, CRGB::White);
   LED_STATE(LED_CONNECT);
-  ConfigWifi(); //建立"HackCUBESpecial_XXXXXX"热点
-  //ConnectWif();
+  delay(10000);
+  //ConfigWifi(); //建立"HackCUBESpecial_XXXXXX"热点
+  ConnectWif();
   delay(100);
   LED_STATE(LED_RUN);
   SPIFFS.begin();
